@@ -14,7 +14,7 @@
 | **M1** | Failure Taxonomy ($\ge 5$ FM) & Gán nhãn Eval set v1 | 12đ | 🟢 Đã hoàn thành |
 | **M2** | Judge-the-Judge Calibration & Audit ($\ge 5$ case) | 12đ | 🟢 Đã hoàn thành |
 | **M3** | Trajectory Graders (ApprovalBypass, RefundAmount, FM-08) | 12đ | 🟢 Đã hoàn thành |
-| **M4** | Paired Bootstrap & Release Gate (CI `eval-gate` xanh) | 15đ | 🟡 Core đã kiểm tra local; chờ push/PR và CI GitHub |
+| **M4** | Paired Bootstrap & Release Gate (CI `eval-gate` xanh) | 15đ | 🟢 Hoàn thành Core; eval-gate GitHub xanh |
 | **DOCS**| Hoàn thiện hồ sơ báo cáo (Eval card, PRD v1.1, Trace case) | 9đ | 🟢 Đã hoàn thành bản Core |
 | **M5** | Eval Set v2, Adversarial Pack & Slice Gate | 10đ | ⚪ Chưa bắt đầu |
 | **M6** | Phân tích nhiễu A/A & Thống kê $\text{pass}@k$, $\text{pass}^k$ | 15đ | ⚪ Chưa bắt đầu |
@@ -121,9 +121,9 @@
 
 ---
 
-#### [ ] M4 — Paired Bootstrap & Release Gate (15đ) + Báo Cáo (9đ)
+#### [x] M4 — Paired Bootstrap & Release Gate (15đ) + Báo Cáo (9đ)
 
-Đã xác minh local ngày 18/11/2026: 18 test Core pass; smoke M0 PASS; eval set 0 lỗi; swarm và fixed gate exit 0; seeded_regression gate exit 1 trên `refund_amount_correct`, `pass_rate`, `reply_amount_correct`; ci_check trên swarm chạy độc lập exit 0. Xem [bằng chứng M4](docs/m4_validation.md). Đã chuẩn bị mã, reports và [nội dung PR](docs/core_pr.md) để chốt Core. Kết nối github.com:443 thất bại cả khi thử ngoài sandbox; chưa push/mở PR/merge, chưa xác nhận GitHub Actions xanh.
+Đã xác minh local ngày 18/11/2026: 18 test Core pass; smoke M0 PASS; eval set 0 lỗi; swarm và fixed gate exit 0; seeded_regression gate exit 1 trên `refund_amount_correct`, `pass_rate`, `reply_amount_correct`; ci_check trên swarm chạy độc lập exit 0. Xem [bằng chứng M4](docs/m4_validation.md). Đã commit/push mã và reports, mở [PR #1](https://github.com/VUDUCTHANG130604/K5-L3A-DAY09-VuDucThang-2A202603601-EvaluationandFailureAnalysis/pull/1) vào main của fork. Đã sửa CRLF/LF và sinh lại reports (SHA `5d2ebeb3d40b`), bổ sung regression test. Workflow [44239263815](https://github.com/VUDUCTHANG130604/K5-L3A-DAY09-VuDucThang-2A202603601-EvaluationandFailureAnalysis/actions/runs/44239263815) đã xanh trên commit `e62b2a9`. Job v2 bỏ qua các bước Advanced vì chưa có baseline_v2. Trạng thái merge được xác nhận trực tiếp tại PR #1.
 
 - [x] Lập trình `paired_bootstrap` trong [src/lab9/stats.py](src/lab9/stats.py) sử dụng `scipy.stats.bootstrap(paired=True, method="percentile")`.
 - [x] Chạy sinh baseline v1 từ `swarm`:
@@ -146,7 +146,7 @@
   ```
 - [x] Cập nhật [src/harness_map.yaml](src/harness_map.yaml): merge section `eval` từ `src/harness_map.eval.yaml` (bump version lên `1.2`).
 - [x] Hoàn thành tài liệu [docs/eval_card.md](docs/eval_card.md) & [docs/PRD_v1.1.md](docs/PRD_v1.1.md) với số liệu thật từ report. Tái sinh bằng `cd src; python -m scripts.write_m4_docs`.
-- [ ] Commit reports và mở Pull Request Core:
+- [x] Commit reports và mở Pull Request Core:
   ```powershell
   git add -f reports/*.json
   git add -A
@@ -220,18 +220,18 @@
 ## 📝 Hồ Sơ Nộp Bài Checklist
 
 - [ ] Tất cả mã nguồn M1–M7 đã hoàn thành và test pass.
-- [ ] File `harness_map.yaml` có section `eval` (phiên bản 1.2).
-- [ ] Đầy đủ 5 tài liệu docs:
+- [x] File `src/harness_map.yaml` có section `eval` (phiên bản 1.2).
+- [x] Đầy đủ 5 tài liệu docs:
   - [x] `docs/failure_taxonomy.md`
   - [x] `docs/judge_audit.md`
   - [x] `docs/trace_case.md`
   - [x] `docs/eval_card.md`
   - [x] `docs/PRD_v1.1.md`
-- [ ] Các file reports json đã được commit trên Git:
+- [x] Các file reports Core json đã được commit trên Git:
   - [x] `src/reports/baseline_v1.json`
   - [x] `src/reports/eval_fixed.json`
   - [x] `src/reports/eval_seeded_regression.json`
   - [ ] `src/reports/baseline_v2.json` (nếu làm Advanced/Expert)
-- [ ] PR đã merge vào `main` trên bản fork cá nhân.
-- [ ] GitHub Actions: Job `eval-gate` (và `eval-gate-v2`) hiển thị xanh.
+- [x] PR Core trong fork: [#1](https://github.com/VUDUCTHANG130604/K5-L3A-DAY09-VuDucThang-2A202603601-EvaluationandFailureAnalysis/pull/1). Trạng thái merge vào `main` được xác nhận tại PR.
+- [x] GitHub Actions: Job `eval-gate` xanh. Job `eval-gate-v2` success nhưng chưa chạy đánh giá Advanced do chưa có baseline v2.
 - [ ] Đã nộp link repo fork cá nhân lên LMS theo hạn của ca.

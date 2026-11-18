@@ -109,7 +109,7 @@ Tone đạt FLOORS κ≥{FLOORS['kappa']}, P≥{FLOORS['precision']}, R≥{FLOOR
 - 14 item, 5 seed, MockLLM và judge replay công khai chưa đại diện cho model thật hoặc tập held-out. Bug hiếm 1/3 seed không được phát hiện ổn định với 5 seed.
 - Slice gate, pass@k/pass^k, integrity/ratchet/traps thuộc M5–M7 chưa hoàn thành. CI hiện chưa bảo vệ đầy đủ trước report bị sửa hoặc chọn seed.
 - Khi đổi item/nhãn/slices hoặc thêm adversarial cases: tăng eval_set_version, giữ provenance và sinh lại baseline. Khi đổi metric/ngưỡng: tăng metric_spec_version; cùng eval-set chỉ siết ngưỡng.
-- Đã xác minh các bước eval-gate tại máy cục bộ; chưa có kết quả GitHub Actions. Theo dõi trạng thái push/PR/merge trong PROGRESS.md.
+- Đã xác minh các bước eval-gate tại máy cục bộ. Kết quả GitHub Actions và trạng thái push/PR/merge được ghi trong PROGRESS.md.
 """
     prd = f"""# PRD v1.1 — LogiX-VN refund agent
 
@@ -169,7 +169,7 @@ python -m lab9.ci_check --pr reports/eval_pr.json --baseline reports/baseline_v1
 - Baseline swarm cần được commit và bảo vệ trên main; PR phải cùng eval_set_sha. CI chạy lại swarm và so metric với baseline.
 - Eval owner: Vũ Đức Thắng. Exit 1 giữ PR, đọc nguyên nhân, sửa và chạy lại; không nới sàn cùng eval set. Không tự cấp waiver; ngoại lệ cần giảng viên/phụ trách lab phê duyệt và ghi lý do vào PR.
 - Fixed exit 0; seeded_regression exit 1, chặn `{', '.join(blocked)}`.
-- Các bước tương ứng workflow Core đã chạy cục bộ; GitHub Actions chưa được chạy/xác nhận. Reports phải được commit; push nhánh starter/d09 và mở PR về main trong fork trước khi merge. Theo dõi trạng thái trong PROGRESS.md.
+- Các bước tương ứng workflow Core đã chạy cục bộ; kết quả GitHub Actions xem PROGRESS.md. Reports phải được commit; push nhánh starter/d09 và mở PR về main trong fork trước khi merge. Theo dõi trạng thái trong PROGRESS.md.
 
 ## 6. Rủi ro mở
 
@@ -194,7 +194,7 @@ python -m lab9.ci_check --pr reports/eval_pr.json --baseline reports/baseline_v1
     evidence = "# M4 — Bằng chứng kiểm tra local\n\n" + runs + "\n\n"
     evidence += "Swarm gate: exit 0. Fixed gate: exit 0. ci_check trên swarm độc lập: exit 0.\n\n"
     evidence += "```text\n" + "\n".join(regression_lines) + "\nexit 1 — blocked: " + ", ".join(blocked) + "\n```\n"
-    evidence += "\nĐây là kết quả local, chưa phải trạng thái GitHub Actions. Có thể dùng output trên trong mô tả PR.\n"
+    evidence += "\nĐây là kết quả local. Kết quả GitHub Actions được ghi trong PROGRESS.md; có thể dùng output trên trong mô tả PR.\n"
     (root / "docs/m4_validation.md").write_text(evidence, encoding="utf-8")
     print("wrote docs/eval_card.md, docs/PRD_v1.1.md, docs/m4_validation.md")
 

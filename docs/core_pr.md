@@ -22,4 +22,4 @@ M5–M7 remain pending. GitHub Actions must pass before merge. Target this fork'
 
 Cross-platform fix: JSONL files use LF via .gitattributes and explicit newline writing. Reports were regenerated with eval set SHA `5d2ebeb3d40b`; semantic items and thresholds are unchanged. A regression test verifies LF-only output on Windows.
 
-GitHub Actions passed on `e62b2a9`: [Core workflow 44239263815](https://github.com/VUDUCTHANG130604/K5-L3A-DAY09-VuDucThang-2A202603601-EvaluationandFailureAnalysis/actions/runs/44239263815). The v2 job succeeds by omitting Advanced steps because baseline_v2 is absent; this does not claim M5?M7 completion.
+GitHub Actions passed on `e62b2a9`: [Core workflow 44239263815](https://github.com/VUDUCTHANG130604/K5-L3A-DAY09-VuDucThang-2A202603601-EvaluationandFailureAnalysis/actions/runs/44239263815). The v2 job succeeds by omitting Advanced steps because baseline_v2 is absent; this does not claim M5–M7 completion.

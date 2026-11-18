@@ -19,4 +19,4 @@ Swarm gate: exit 0. Fixed gate: exit 0. ci_check trên swarm độc lập: exit 
 exit 1 — blocked: refund_amount_correct, pass_rate, reply_amount_correct
 ```
 
-Đây là kết quả local, chưa phải trạng thái GitHub Actions. Có thể dùng output trên trong mô tả PR.
+Đây là kết quả local. Kết quả GitHub Actions được ghi trong PROGRESS.md; có thể dùng output trên trong mô tả PR.

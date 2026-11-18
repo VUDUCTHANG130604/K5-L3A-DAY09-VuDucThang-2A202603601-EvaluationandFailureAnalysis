@@ -74,7 +74,7 @@ python -m lab9.ci_check --pr reports/eval_pr.json --baseline reports/baseline_v1
 - Baseline swarm cần được commit và bảo vệ trên main; PR phải cùng eval_set_sha. CI chạy lại swarm và so metric với baseline.
 - Eval owner: Vũ Đức Thắng. Exit 1 giữ PR, đọc nguyên nhân, sửa và chạy lại; không nới sàn cùng eval set. Không tự cấp waiver; ngoại lệ cần giảng viên/phụ trách lab phê duyệt và ghi lý do vào PR.
 - Fixed exit 0; seeded_regression exit 1, chặn `refund_amount_correct, pass_rate, reply_amount_correct`.
-- Các bước tương ứng workflow Core đã chạy cục bộ; GitHub Actions chưa được chạy/xác nhận. Reports phải được commit; push nhánh starter/d09 và mở PR về main trong fork trước khi merge. Theo dõi trạng thái trong PROGRESS.md.
+- Các bước tương ứng workflow Core đã chạy cục bộ; kết quả GitHub Actions xem PROGRESS.md. Reports phải được commit; push nhánh starter/d09 và mở PR về main trong fork trước khi merge. Theo dõi trạng thái trong PROGRESS.md.
 
 ## 6. Rủi ro mở
 
