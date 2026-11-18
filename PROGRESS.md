@@ -123,7 +123,7 @@
 
 #### [ ] M4 — Paired Bootstrap & Release Gate (15đ) + Báo Cáo (9đ)
 
-Đã xác minh local ngày 18/11/2026: 17 test Core pass; smoke M0 PASS; eval set 0 lỗi; swarm và fixed gate exit 0; seeded_regression gate exit 1 trên `refund_amount_correct`, `pass_rate`, `reply_amount_correct`; ci_check trên swarm chạy độc lập exit 0. Xem [bằng chứng M4](docs/m4_validation.md). Đã chuẩn bị mã, reports và [nội dung PR](docs/core_pr.md) để chốt Core. Kết nối github.com:443 thất bại cả khi thử ngoài sandbox; chưa push/mở PR/merge, chưa xác nhận GitHub Actions xanh.
+Đã xác minh local ngày 18/11/2026: 18 test Core pass; smoke M0 PASS; eval set 0 lỗi; swarm và fixed gate exit 0; seeded_regression gate exit 1 trên `refund_amount_correct`, `pass_rate`, `reply_amount_correct`; ci_check trên swarm chạy độc lập exit 0. Xem [bằng chứng M4](docs/m4_validation.md). Đã chuẩn bị mã, reports và [nội dung PR](docs/core_pr.md) để chốt Core. Kết nối github.com:443 thất bại cả khi thử ngoài sandbox; chưa push/mở PR/merge, chưa xác nhận GitHub Actions xanh.
 
 - [x] Lập trình `paired_bootstrap` trong [src/lab9/stats.py](src/lab9/stats.py) sử dụng `scipy.stats.bootstrap(paired=True, method="percentile")`.
 - [x] Chạy sinh baseline v1 từ `swarm`:
@@ -222,15 +222,15 @@
 - [ ] Tất cả mã nguồn M1–M7 đã hoàn thành và test pass.
 - [ ] File `harness_map.yaml` có section `eval` (phiên bản 1.2).
 - [ ] Đầy đủ 5 tài liệu docs:
-  - [ ] `docs/failure_taxonomy.md`
-  - [ ] `docs/judge_audit.md`
-  - [ ] `docs/trace_case.md`
-  - [ ] `docs/eval_card.md`
-  - [ ] `docs/PRD_v1.1.md`
+  - [x] `docs/failure_taxonomy.md`
+  - [x] `docs/judge_audit.md`
+  - [x] `docs/trace_case.md`
+  - [x] `docs/eval_card.md`
+  - [x] `docs/PRD_v1.1.md`
 - [ ] Các file reports json đã được commit trên Git:
-  - [ ] `src/reports/baseline_v1.json`
-  - [ ] `src/reports/eval_fixed.json`
-  - [ ] `src/reports/eval_seeded_regression.json`
+  - [x] `src/reports/baseline_v1.json`
+  - [x] `src/reports/eval_fixed.json`
+  - [x] `src/reports/eval_seeded_regression.json`
   - [ ] `src/reports/baseline_v2.json` (nếu làm Advanced/Expert)
 - [ ] PR đã merge vào `main` trên bản fork cá nhân.
 - [ ] GitHub Actions: Job `eval-gate` (và `eval-gate-v2`) hiển thị xanh.

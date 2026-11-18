@@ -6,7 +6,7 @@ Includes the Lab 8 source overlay required by the starter repository, public fix
 
 Validation on 2026-11-18:
 
-- Core student tests: 17 passed; smoke: M0 PASS; eval set: 0 problems.
+- Core student tests: 18 passed; smoke: M0 PASS; eval set: 0 problems.
 - Independent swarm rerun matches baseline; swarm gate, fixed gate and ci_check exit 0.
 - Each report contains 70 distinct item/seed rows and no evaluator failures.
 - Seeded regression gate exits 1 with the required pass_rate verdict:
@@ -19,3 +19,5 @@ exit 1 — blocked: refund_amount_correct, pass_rate, reply_amount_correct
 ```
 
 M5–M7 remain pending. GitHub Actions must pass before merge. Target this fork's main branch, not the instructor repository.
+
+Cross-platform fix: JSONL files use LF via .gitattributes and explicit newline writing. Reports were regenerated with eval set SHA `5d2ebeb3d40b`; semantic items and thresholds are unchanged. A regression test verifies LF-only output on Windows.

@@ -15,11 +15,11 @@ v1.1 bổ sung tiêu chí đánh giá và release gate. Bảng số liệu đư�
 - Mô phỏng offline qua ticket tiếng Việt: giao trễ, hư hỏng đã xác minh, thiếu thông tin, sai quyền và approval không hợp lệ.
 - Chỉ xử lý đơn thuộc principal; host kiểm tra approval đúng claim, hạn dùng, số tiền được duyệt, số đã thanh toán và số đã hoàn theo đơn. Phí giao trễ theo chính sách hiện hành; bồi thường hư hỏng tối đa 150.000 VND theo fixture. Chọn mức đủ điều kiện lớn nhất và khấu trừ khoản đã hoàn.
 - Ngoài phạm vi: thanh toán thật, người dùng thật, xử lý hàng loạt nhiều đơn, tranh chấp pháp lý và triển khai production.
-- Môi trường đo: MockLLM, v1 SHA `66a1ce916807`, 14 item × 5 seed.
+- Môi trường đo: MockLLM, v1 SHA `5d2ebeb3d40b`, 14 item × 5 seed.
 
 ## 3. Định nghĩa chạy đúng
 
-Baseline: `E-swarm-20261118-66a1` ([report](../src/reports/baseline_v1.json)).
+Baseline: `E-swarm-20261118-5d2e` ([report](../src/reports/baseline_v1.json)).
 
 | Metric | Loại | Ngưỡng từ spec | Chặn release | Baseline |
 |---|---|---|---|---|
@@ -45,7 +45,7 @@ Giảm có ý nghĩa: CI 95% paired bootstrap của Δ (PR − baseline) nằm h
 | `cost_per_success` | 49.567 | 48.7157 | 81.202 |
 | `reply_amount_correct` | 1.0 | 1.0 | 0.7857 |
 
-Run fixed: `E-fixed-20261118-66a1`; regression: `E-seeded_regression-20261118-66a1`. Xem [eval card](eval_card.md) cho CI, phiên bản mã và giới hạn.
+Run fixed: `E-fixed-20261118-5d2e`; regression: `E-seeded_regression-20261118-5d2e`. Xem [eval card](eval_card.md) cho CI, phiên bản mã và giới hạn.
 
 ## 4. Failure mode → grader
 

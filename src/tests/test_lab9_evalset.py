@@ -39,6 +39,15 @@ def test_build_writes_items_and_labels_without_checking_tags(tmp_path, evalset_c
     assert labels == {"C-001": {"refund_vnd": 35000}}
 
 
+@pytest.mark.student
+def test_build_uses_lf_for_cross_platform_eval_set_sha(tmp_path, evalset_cli):
+    result = evalset_cli("--build")
+    assert result.returncode == 0, result.stdout + result.stderr
+    content = (tmp_path / "data/eval/eval_set_v1.jsonl").read_bytes()
+    assert content.endswith(b"\n")
+    assert b"\r" not in content
+
+
 def test_explicit_check_runs_after_build(tmp_path, evalset_cli):
     result = evalset_cli("--build", "--check")
     item = json.loads((tmp_path / "data/eval/eval_set_v1.jsonl").read_text(encoding="utf-8"))

@@ -4,15 +4,15 @@ Sinh bằng `cd src; python -m scripts.write_m4_docs` từ reports, spec và CSV
 
 ## Phiên bản và nguồn dữ liệu
 
-- baseline: `E-swarm-20261118-66a1` — 70 rows, 0 evaluator failures.
-- fixed: `E-fixed-20261118-66a1` — 70 rows, 0 evaluator failures.
-- regression: `E-seeded_regression-20261118-66a1` — 70 rows, 0 evaluator failures.
-- pr: `E-swarm-20261118-66a1` — 70 rows, 0 evaluator failures.
+- baseline: `E-swarm-20261118-5d2e` — 70 rows, 0 evaluator failures.
+- fixed: `E-fixed-20261118-5d2e` — 70 rows, 0 evaluator failures.
+- regression: `E-seeded_regression-20261118-5d2e` — 70 rows, 0 evaluator failures.
+- pr: `E-swarm-20261118-5d2e` — 70 rows, 0 evaluator failures.
 
-- Eval set v1 SHA: `66a1ce916807`; 14 item × 5 seed; seeds `[11, 22, 33, 44, 55]`.
+- Eval set v1 SHA: `5d2ebeb3d40b`; 14 item × 5 seed; seeds `[11, 22, 33, 44, 55]`.
 - Nguồn: `lab8_public`; nhãn tách riêng trong `data/eval/labels_v1.json`.
 - Metric spec version: `1.0`; MockLLM; Python `3.11.9`.
-- HEAD trước khi đóng gói hồ sơ: `9e1549a699c6d8bf10b8892c9c3c443a45d8cf55`. SHA-256 bên dưới nhận diện chính xác các file được đánh giá, kể cả khi hồ sơ được đưa vào commit mới.
+- HEAD trước khi đóng gói hồ sơ: `10289109e181c0503a59af887afa8170e5b20b4d`. SHA-256 bên dưới nhận diện chính xác các file được đánh giá, kể cả khi hồ sơ được đưa vào commit mới.
 
 | File tương đối với src/ | SHA-256 |
 |---|---|
@@ -20,8 +20,9 @@ Sinh bằng `cd src; python -m scripts.write_m4_docs` từ reports, spec và CSV
 | `lab9/gate.py` | `2faeb170eafbc37f7998fc4360910ba01fe08b4d2459fa40850bfac196490ed6` |
 | `lab9/graders.py` | `9e20d629ed334c9b93057771bb0e6e3081160b6aa61b93fdb42a008ca8d75bc6` |
 | `lab9/eval.py` | `a5779a78206f1cebe9213517183ab1ab325a64a6c8e97fffc0cc5492aa8a55b5` |
+| `lab9/evalset.py` | `513f830b60f97462583461b062c7e5dc8a014c2eaae94019d30ea45513d341cf` |
 | `config/metric_spec.yaml` | `9bf4a34d5b595cf06ebe43c813d3eacbd5ffed9ca370d7813585dc74d20ee9fc` |
-| `data/eval/eval_set_v1.jsonl` | `66a1ce9168071d43acc4d8aaa02aae8321283916890553115d9303d1781272d6` |
+| `data/eval/eval_set_v1.jsonl` | `5d2ebeb3d40b23054cb3072f958a52f4e81a474e45fb7f9053c73c25d68a80f9` |
 | `data/eval/labels_v1.json` | `8ec43bda73843193d35b515ab41cb612543b4a4f5c6dab31f1ecc62154eb8a87` |
 
 ## Metric và kết quả

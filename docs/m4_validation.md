@@ -1,9 +1,9 @@
 # M4 — Bằng chứng kiểm tra local
 
-- baseline: `E-swarm-20261118-66a1` — 70 rows, 0 evaluator failures.
-- fixed: `E-fixed-20261118-66a1` — 70 rows, 0 evaluator failures.
-- regression: `E-seeded_regression-20261118-66a1` — 70 rows, 0 evaluator failures.
-- pr: `E-swarm-20261118-66a1` — 70 rows, 0 evaluator failures.
+- baseline: `E-swarm-20261118-5d2e` — 70 rows, 0 evaluator failures.
+- fixed: `E-fixed-20261118-5d2e` — 70 rows, 0 evaluator failures.
+- regression: `E-seeded_regression-20261118-5d2e` — 70 rows, 0 evaluator failures.
+- pr: `E-swarm-20261118-5d2e` — 70 rows, 0 evaluator failures.
 
 Swarm gate: exit 0. Fixed gate: exit 0. ci_check trên swarm độc lập: exit 0.
 

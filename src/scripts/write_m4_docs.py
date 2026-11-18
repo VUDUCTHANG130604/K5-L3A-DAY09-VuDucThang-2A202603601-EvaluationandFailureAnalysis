@@ -31,7 +31,7 @@ def main() -> None:
         assert not report["evaluator_failures"]
 
     head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
-    paths = ["lab9/stats.py", "lab9/gate.py", "lab9/graders.py", "lab9/eval.py",
+    paths = ["lab9/stats.py", "lab9/gate.py", "lab9/graders.py", "lab9/eval.py", "lab9/evalset.py",
              "config/metric_spec.yaml", "data/eval/eval_set_v1.jsonl", "data/eval/labels_v1.json"]
     hashes = "\n".join(f"| `{p}` | `{hashlib.sha256((src / p).read_bytes()).hexdigest()}` |" for p in paths)
     threshold_rows, result_rows, ci_rows = [], [], []
