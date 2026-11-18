@@ -16,9 +16,9 @@
 | **M3** | Trajectory Graders (ApprovalBypass, RefundAmount, FM-08) | 12đ | 🟢 Đã hoàn thành |
 | **M4** | Paired Bootstrap & Release Gate (CI `eval-gate` xanh) | 15đ | 🟢 Hoàn thành Core; eval-gate GitHub xanh |
 | **DOCS**| Hoàn thiện hồ sơ báo cáo (Eval card, PRD v1.1, Trace case) | 9đ | 🟢 Đã hoàn thành bản Core |
-| **M5** | Eval Set v2, Adversarial Pack & Slice Gate | 10đ | ⚪ Chưa bắt đầu |
-| **M6** | Phân tích nhiễu A/A & Thống kê $\text{pass}@k$, $\text{pass}^k$ | 15đ | ⚪ Chưa bắt đầu |
-| **M7** | Gate chống gian lận (Integrity check, Ratchet, Traps) | 15đ | ⚪ Chưa bắt đầu |
+| **M5** | Eval Set v2, Adversarial Pack & Slice Gate | 10đ | 🟡 Hoàn thành local; chờ CI GitHub |
+| **M6** | Phân tích nhiễu A/A & Thống kê $\text{pass}@k$, $\text{pass}^k$ | 15đ | 🟡 Hoàn thành local; chờ CI GitHub |
+| **M7** | Gate chống gian lận (Integrity check, Ratchet, Traps) | 15đ | 🟡 Hoàn thành local; chờ CI GitHub |
 | **BONUS** | Port grader sang Inspect AI / DeepEval | +5đ | ⚪ Tùy chọn |
 
 ---
@@ -158,6 +158,8 @@
 ---
 
 ### Giai đoạn 2: Advanced (25 Điểm)
+
+Ngày 18/11/2026, nhánh `starter/d09-v2`: 64 tests pass (61 student); eval set v2 có 28 item × 5 seed, SHA `06b154b23997`, 0 lỗi. A/A có mọi Δ metric bằng 0; pass^5=0.8929, chọn sàn 0.80. Mutation score 3/3, false alarms 0; 4/4 traps bị chặn do integrity. `slice_regression` chỉ bị chặn qua `money_movement`; `flaky_regression` bị chặn bởi `pass_hat_5` và các tiêu chí hồi quy. Mã, dữ liệu và reports đã được chuẩn bị để commit/push; CI/PR Advanced chưa xác nhận. Xem [bằng chứng M5–M7](docs/advanced_validation.md).
 
 #### [ ] M5 — Eval Set v2 & Slice Gate (10đ)
 - [ ] Cấu hình ánh xạ cơ chế tấn công trong [src/config/fm_map.yaml](src/config/fm_map.yaml).
