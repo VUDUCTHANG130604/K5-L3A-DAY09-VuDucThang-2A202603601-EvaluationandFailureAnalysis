@@ -12,7 +12,7 @@ Sinh bằng `cd src; python -m scripts.write_m4_docs` từ reports, spec và CSV
 - Eval set v1 SHA: `5d2ebeb3d40b`; 14 item × 5 seed; seeds `[11, 22, 33, 44, 55]`.
 - Nguồn: `lab8_public`; nhãn tách riêng trong `data/eval/labels_v1.json`.
 - Metric spec version: `1.0`; MockLLM; Python `3.11.9`.
-- HEAD trước khi đóng gói hồ sơ: `10289109e181c0503a59af887afa8170e5b20b4d`. SHA-256 bên dưới nhận diện chính xác các file được đánh giá, kể cả khi hồ sơ được đưa vào commit mới.
+- HEAD trước khi đóng gói hồ sơ: `e62b2a9aa1790accda6dd6c057d071480517765b`. SHA-256 bên dưới nhận diện chính xác các file được đánh giá, kể cả khi hồ sơ được đưa vào commit mới.
 
 | File tương đối với src/ | SHA-256 |
 |---|---|
