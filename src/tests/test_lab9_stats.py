@@ -49,3 +49,17 @@ def test_paired_bootstrap_reference(stats):
 
 def test_paired_bootstrap_identical_is_zero(stats):
     assert stats.paired_bootstrap([1, 0, 1], [1, 0, 1]) == (0.0, 0.0, 0.0)
+
+
+def test_paired_bootstrap_preserves_pairing_and_direction(stats):
+    # Every paired difference is -0.2, despite different absolute item scores.
+    d, lo, hi = stats.paired_bootstrap([0.1, 0.4, 0.7], [0.3, 0.6, 0.9])
+    assert (d, lo, hi) == pytest.approx((-0.2, -0.2, -0.2))
+
+
+@pytest.mark.parametrize("a,b", [([], []), ([1], [1]), ([1, 0], [1]),
+                                      ([1, float("nan")], [1, 0]),
+                                      ([1, float("inf")], [1, 0])])
+def test_paired_bootstrap_rejects_invalid_samples(stats, a, b):
+    with pytest.raises(ValueError):
+        stats.paired_bootstrap(a, b)
